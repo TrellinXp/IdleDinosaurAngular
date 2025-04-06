@@ -17,5 +17,5 @@ import { environment } from '../environments/environment';
 
 //const firebase = initializeApp(environment.firebase);
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideFirebaseApp(() => initializeApp({ projectId: "idle-dinosaur-angular", appId: "1:732585017361:web:ecd596390717e4963931b0", storageBucket: "idle-dinosaur-angular.firebasestorage.app", apiKey: "AIzaSyAR7WuC11Sm5Hp8bS3C71rqBR2s6qF8u-M", authDomain: "idle-dinosaur-angular.firebaseapp.com", messagingSenderId: "732585017361", measurementId: "G-1SZQ17VPPJ" })), provideAuth(() => getAuth()), provideAnalytics(() => getAnalytics()), ScreenTrackingService, UserTrackingService, provideDatabase(() => getDatabase()), provideFunctions(() => getFunctions())]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(withEventReplay()), provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth()), provideAnalytics(() => getAnalytics()), ScreenTrackingService, UserTrackingService, provideDatabase(() => getDatabase()), provideFunctions(() => getFunctions())]
 };
