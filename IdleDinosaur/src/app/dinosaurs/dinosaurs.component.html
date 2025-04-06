@@ -1,0 +1,9 @@
+<h1>Dinosaurs</h1>
+<div>
+   <div *ngIf="dinosaurs">
+        <div class="dinosaur" *ngFor="let dinosaur of dinosaurs">
+            <h2>{{ dinosaur.name }}</h2>
+            <img [src]="dinosaur.image" alt="{{ dinosaur.name }}" width="100" height="100">
+            <p>{{ dinosaur.level }}</p>
+    </div>
+</div>

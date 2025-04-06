@@ -15,13 +15,13 @@ export class HatchComponent {
   display: any;
 
   dinosaurs: any[] = [
-    { name: "amargasaurus", level: 1, attack: 10, hp: 10 },
-    { name: "brachiosaurus", level: 1, attack: 11, hp: 11 },
-    { name: "diplodocus", level: 1, attack: 12, hp: 12 },
-    { name: "stegosaurus", level: 1, attack: 13, hp: 13 },
-    { name: "triceratops", level: 1, attack: 14, hp: 14 },
-    { name: "velociraptor", level: 1, attack: 15, hp: 15 },
-    { name: "tyrannosaurus", level: 1, attack: 16, hp: 16 },
+    { name: "amargasaurus", level: 1, attack: 10, hp: 10, image: "amargasaurus.png" },
+    { name: "brachiosaurus", level: 1, attack: 11, hp: 11, image: "brachiosaurus.png" },
+    { name: "diplodocus", level: 1, attack: 12, hp: 12 , image: "diplodocus.png" },
+    { name: "stegosaurus", level: 1, attack: 13, hp: 13 , image: "stegosaurus.png" },
+    { name: "triceratops", level: 1, attack: 14, hp: 14 , image: "triceratops.png" },
+    { name: "velociraptor", level: 1, attack: 15, hp: 15, image: "velociraptor.png" },
+    { name: "tyrannosaurus", level: 1, attack: 16, hp: 16, image: "tyrannosaurus.png" }
   ]
   
   constructor() {
