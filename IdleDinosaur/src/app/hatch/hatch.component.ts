@@ -15,13 +15,15 @@ export class HatchComponent {
   display: any;
 
   dinosaurs: any[] = [
-    { name: "amargasaurus", level: 1, attack: 10, hp: 10, image: "amargasaurus.png" },
-    { name: "brachiosaurus", level: 1, attack: 11, hp: 11, image: "brachiosaurus.png" },
-    { name: "diplodocus", level: 1, attack: 12, hp: 12 , image: "diplodocus.png" },
-    { name: "stegosaurus", level: 1, attack: 13, hp: 13 , image: "stegosaurus.png" },
-    { name: "triceratops", level: 1, attack: 14, hp: 14 , image: "triceratops.png" },
-    { name: "velociraptor", level: 1, attack: 15, hp: 15, image: "velociraptor.png" },
-    { name: "tyrannosaurus", level: 1, attack: 16, hp: 16, image: "tyrannosaurus.png" }
+    { name: "Amargasaurus", level: 1, attack: 10, hp: 10, image: "amargasaurus.png" },
+    { name: "Apatosaurus", level: 1, attack: 11, hp: 11, image: "apatosaurus.png" },
+    { name: "Azendohsaurus", level: 1, attack: 12, hp: 12, image: "azendohsaurus.png" },  
+    { name: "Beipiaosaurus", level: 1, attack: 13, hp: 13, image: "beipiaosaurus.png" },
+    { name: "Corythosaurus", level: 1, attack: 14, hp: 14, image: "corythosaurus.png" },
+    { name: "Pachycephalosaurus", level: 1, attack: 15, hp: 15, image: "pachycephalosaurus.png"},
+    { name: "Stegosaurus", level: 1, attack: 16, hp: 16, image: "stegosaurus.png" },
+    { name: "Tyrannosaurus", level: 1, attack: 17, hp: 17, image: "tyrannosaurus.png" },
+    { name: "Velociraptor", level: 1, attack: 18, hp: 18, image: "velociraptor.png" },
   ]
   
   constructor() {
@@ -91,8 +93,10 @@ export class HatchComponent {
     const docRef = await addDoc(collection(db, "dinosaurs"), {
       name: this.dinosaurs[random].name,
       level: this.dinosaurs[random].level,
-      attack: this.dinosaurs[random].attack
-    });
+      attack: this.dinosaurs[random].attack,
+      image: this.dinosaurs[random].image,
+      hp: this.dinosaurs[random].hp, 
+      });
 
     console.log("Added dinosaur with name : ", this.dinosaurs[random].name);
   }

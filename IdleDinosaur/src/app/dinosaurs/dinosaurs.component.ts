@@ -17,9 +17,10 @@ export class DinosaursComponent {
     const db = getFirestore(firebase.app());
     const querySnapshot = await getDocs(collection(db, "dinosaurs"));
     querySnapshot.forEach((doc) => {
-      console.log(`${doc.id} => ${doc.data()}`);
       this.dinosaurs.push(doc.data());
-    });  
+    });
+    console.log("Finished fetching dinosaurs from Firestore")
+    this.dinosaurs.sort((a, b) => a.name.localeCompare(b.name));  
   }
 
   constructor() {
@@ -32,5 +33,6 @@ export class DinosaursComponent {
     }
 
     this.fetchDinosaurs();
+    console.log("Dinosaurs component initialized");
   }
 }

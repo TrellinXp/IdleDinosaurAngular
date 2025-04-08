@@ -1,6 +1,21 @@
 .dinosaur {
+    background-color: #02defb;
+    margin-top: 3rem;
+    padding-left: 3rem;
+    width: 18rem;       
+    margin-right: 4rem;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+    height: 29rem
+}
+
+.dinosaurs {
     display: flex;
-    background-color: #0702fb;
-    margin-top: 10rem;
-    width: 30%;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.dinosaur img {
+    width: 14rem;
+    height: 14rem;
 }
